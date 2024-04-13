@@ -1,3 +1,5 @@
+#![warn(clippy::all, clippy::pedantic)]
+
 fn main() {
     let arr: [i32; 10] = [-1, 2, 3, 10, 50, 100, 130, 132, 150, 160];
     let result = bin_search(&arr, 3);
