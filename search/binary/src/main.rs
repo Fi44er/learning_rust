@@ -24,12 +24,7 @@ fn bin_search(arr: &[i32], disired_value: i32) -> Option<(i32, usize)> {
 
         match mid_value.cmp(&disired_value) {
             Ordering::Equal => return Some((mid_value, mid)),
-            Ordering::Greater => {
-                up = match mid.checked_sub(1) {
-                    Some(result) => result,
-                    _ => return None,
-                }
-            }
+            Ordering::Greater => up = mid.checked_sub(1)?,
             Ordering::Less => low = mid + 1,
         }
 
