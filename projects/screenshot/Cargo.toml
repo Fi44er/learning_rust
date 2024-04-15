@@ -1,0 +1,11 @@
+[package]
+name = "screenshot"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.37"
+rdev = { version = "0.5.3", features = ["unstable_grab"] }
+screenshots = "0.8.10"
